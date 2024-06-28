@@ -9,59 +9,64 @@
     </ContentPage.BindingContext>
 
     <StackLayout Padding="20" HorizontalOptions="Center" WidthRequest="500">
-        <Entry Text="{Binding Car.Name}" FontSize="Header" HorizontalOptions="Center" Margin="0,0,50,40"/>
+        <Label Text="{Binding Car.Name}" FontSize="Header" HorizontalOptions="Center" Margin="0,0,50,40"/>
 
         <Grid Margin="0,0,0,10">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="150" />
+                <!-- Adjust the width as needed -->
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <Label Text="Name: " FontAttributes="Bold" Grid.Column="0" FontSize="Medium"/>
-            <Entry Text="{Binding Car.Name}" Grid.Column="1" Margin="10,0,0,0" FontSize="Medium"/>
+            <Label Text="Name: " FontAttributes="Bold" Grid.Column="0" FontSize="Medium" VerticalOptions="Center" HorizontalTextAlignment="End" Margin="0,0,10,0"/>
+            <Entry Text="{Binding Car.Name}" Grid.Column="1" Margin="0,0,0,0" FontSize="Medium"/>
         </Grid>
 
         <Grid Margin="0,0,0,10">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="150" />
+                <!-- Adjust the width as needed -->
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <Label Text="Model: " FontAttributes="Bold" Grid.Column="0" FontSize="Medium"/>
-            <Entry Text="{Binding Car.Model}" Grid.Column="1" Margin="10,0,0,0" FontSize="Medium"/>
+            <Label Text="Model: " FontAttributes="Bold" Grid.Column="0" FontSize="Medium" VerticalOptions="Center" HorizontalTextAlignment="End" Margin="0,0,10,0"/>
+            <Entry Text="{Binding Car.Model}" Grid.Column="1" Margin="0,0,0,0" FontSize="Medium"/>
         </Grid>
 
         <Grid Margin="0,0,0,10">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="150" />
+                <!-- Adjust the width as needed -->
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <Label Text="Make: " FontAttributes="Bold" Grid.Column="0" FontSize="Medium"/>
-            <Entry Text="{Binding Car.Make}" Grid.Column="1" Margin="10,0,0,0" FontSize="Medium"/>
+            <Label Text="Make: " FontAttributes="Bold" Grid.Column="0" FontSize="Medium" VerticalOptions="Center" HorizontalTextAlignment="End" Margin="0,0,10,0"/>
+            <Entry Text="{Binding Car.Make}" Grid.Column="1" Margin="0,0,0,0" FontSize="Medium"/>
         </Grid>
 
         <Grid Margin="0,0,0,10">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="150" />
+                <!-- Adjust the width as needed -->
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <Label Text="Year: " FontAttributes="Bold" Grid.Column="0" FontSize="Medium"/>
-            <Entry Text="{Binding Car.Year}" Grid.Column="1" Margin="10,0,0,0" FontSize="Medium"/>
+            <Label Text="Year: " FontAttributes="Bold" Grid.Column="0" FontSize="Medium" VerticalOptions="Center" HorizontalTextAlignment="End" Margin="0,0,10,0"/>
+            <Entry Text="{Binding Car.Year}" Grid.Column="1" Margin="0,0,0,0" FontSize="Medium"/>
         </Grid>
 
         <Grid Margin="0,0,0,10">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="150" />
+                <!-- Adjust the width as needed -->
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <Label Text="Created At: " FontAttributes="Bold" Grid.Column="0" FontSize="Medium"/>
-            <Entry Text="{Binding Car.CreatedAt}" Grid.Column="1" Margin="10,0,0,0" FontSize="Medium"/>
+            <Label Text="Created At: " FontAttributes="Bold" Grid.Column="0" FontSize="Medium" VerticalOptions="Center" HorizontalTextAlignment="End" Margin="0,0,10,0"/>
+            <Entry Text="{Binding Car.CreatedAt}" Grid.Column="1" Margin="0,0,0,0" FontSize="Medium"/>
         </Grid>
 
-        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,30,0,0">
+        <StackLayout Orientation="Horizontal" HorizontalOptions="End" Margin="0,30,0,0">
             <Button Text="Edit" Command="{Binding SaveCarCommand}" WidthRequest="80" Margin="0,0,10,0"/>
             <Button Text="Delete" Command="{Binding DeleteCarCommand}" WidthRequest="80"/>
         </StackLayout>
