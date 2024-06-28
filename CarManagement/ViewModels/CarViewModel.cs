@@ -14,6 +14,8 @@ namespace CarManagement.ViewModels
         {
             Cars = new ObservableCollection<CarModel>();
 
+
+
             // Sample data (for testing purposes)
             Cars.Add(new CarModel { Id = 1, Name = "Car 1", Model = "Model 1", Make = "Make 1", Year = 2020, CreatedAt = DateTime.Now });
             Cars.Add(new CarModel { Id = 2, Name = "Car 2", Model = "Model 2", Make = "Make 2", Year = 2021, CreatedAt = DateTime.Now });
