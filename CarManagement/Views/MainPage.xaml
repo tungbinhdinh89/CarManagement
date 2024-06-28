@@ -15,7 +15,7 @@
                WidthRequest="200" />
 
         <Button Text="Add Car"
-                Command="{Binding NavigateToAddCarCommand}"
+                 Command="{Binding CarViewModel.OnAddCarCommand}"
                 WidthRequest="100"
                 Margin="0,0,50,0"
                 HorizontalOptions="End" />
@@ -23,7 +23,8 @@
         <ListView x:Name="CarListView"
                   ItemsSource="{Binding CarViewModel.Cars}"
                   SelectionMode="None"
-                  Margin="50,20">
+                  Margin="50,20"
+                  ItemTapped="OnItemTapped">
             <ListView.Header>
                 <StackLayout Orientation="Horizontal" Padding="15" BackgroundColor="MediumPurple">
                     <Label Text="ID" WidthRequest="50" HorizontalTextAlignment="Start" />

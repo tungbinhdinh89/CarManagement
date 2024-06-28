@@ -1,4 +1,5 @@
-﻿using CarManagement.ViewModels;
+﻿using CarManagement.Model;
+using CarManagement.ViewModels;
 
 namespace CarManagement.Views
 {
@@ -7,8 +8,23 @@ namespace CarManagement.Views
         public MainPage()
         {
             InitializeComponent();
-            BindingContext = new MainViewModel();
+
         }
+        private void OnItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            if (e.Item == null) return;
+
+            var viewModel = BindingContext as MainViewModel;
+            var car = e.Item as CarModel;
+            if (viewModel?.CarViewModel?.OnCarTappedCommand?.CanExecute(car) == true)
+            {
+                viewModel.CarViewModel.OnCarTappedCommand.Execute(car);
+            }
+
+                   // Deselect item
+                   ((ListView)sender).SelectedItem = null;
+        }
+
     }
 
 }
