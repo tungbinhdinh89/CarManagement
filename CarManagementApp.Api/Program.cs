@@ -1,4 +1,7 @@
 
+using CarManagementApp.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace CarManagementApp.Api
 {
     public class Program
@@ -13,6 +16,10 @@ namespace CarManagementApp.Api
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            // Configure DbContext
+            builder.Services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             var app = builder.Build();
 
