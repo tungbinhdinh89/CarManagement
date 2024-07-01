@@ -1,4 +1,5 @@
 
+using CarManagementApp.Core;
 using CarManagementApp.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,6 +12,7 @@ namespace CarManagementApp.Api
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            builder.Services.AddCoreService();
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -18,8 +20,10 @@ namespace CarManagementApp.Api
             builder.Services.AddSwaggerGen();
 
             // Configure DbContext
-            builder.Services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+            var connectionString = builder.Configuration.GetSection("DbOptions:ConnectionString").Value;
+            builder.Services.AddDbContextFactory<ApplicationDbContext>(options =>
+                options.UseSqlServer(connectionString));
+
 
             var app = builder.Build();
 
