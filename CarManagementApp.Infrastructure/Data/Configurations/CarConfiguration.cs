@@ -14,7 +14,7 @@ namespace CarManagementApp.Infrastructure.Data.Configurations
             builder.Property(e => e.Model).IsRequired();
             builder.Property(e => e.Make).IsRequired();
             builder.Property(e => e.Year).IsRequired();
-            builder.Property(e => e.CreatedAtAS).IsRequired();
+            builder.Property(e => e.CreatedAt).IsRequired();
         }
     }
 }
