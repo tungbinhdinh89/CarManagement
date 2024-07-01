@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace CarManagementApp.Core.Common;
+namespace CarManagementApp.Domain.Common;
 
 [DebuggerStepThrough]
 [DebuggerDisplay("Total:{Total} Current:{Current}")]

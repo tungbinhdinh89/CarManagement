@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using System.Text.Json.Serialization;
 
-namespace CarManagementApp.Core.Common;
+namespace CarManagementApp.Domain.Common;
 
 [DebuggerStepThrough] // Instructs the debugger to step through the code without stopping.
 [DebuggerDisplay("{Code}")] // Displays the Code property value in the debugger.
