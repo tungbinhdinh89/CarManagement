@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace CarManagementApp.Infrastructure.Migrations
+namespace CarManagementApp.Infrastructure.Data.Migrations
 {
     /// <inheritdoc />
     public partial class InitialCreate : Migration
@@ -21,7 +21,7 @@ namespace CarManagementApp.Infrastructure.Migrations
                     Model = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Make = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Year = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CreatedAtAS = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {

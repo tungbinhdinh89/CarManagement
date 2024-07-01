@@ -13,9 +13,13 @@ namespace CarManagementApp.Infrastructure.Data
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfiguration(new CarConfiguration());
 
-            modelBuilder.Entity<CarEntity>()
-                .Property(e => e.Id)
-                .ValueGeneratedOnAdd();
+            //modelBuilder.Entity<CarEntity>()
+            //    .Property(e => e.Id)
+            //    .ValueGeneratedOnAdd();
+            modelBuilder.Entity<CarEntity>(entity =>
+            {
+                entity.Property(e => e.CreatedAt).HasColumnName("CreatedAt");  // Đảm bảo cột này được ánh xạ
+            });
         }
     }
 }
