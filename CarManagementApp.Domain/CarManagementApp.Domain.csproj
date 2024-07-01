@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CarManagementApp.Core\CarManagementApp.Core.csproj" />
+
   </ItemGroup>
 
 </Project>

@@ -25,12 +25,10 @@
   <ItemGroup>
     <Folder Include="Data\Migrations\" />
     <Folder Include="Extensions\" />
-    <Folder Include="Common\" />
     <Folder Include="Repositories\" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CarManagementApp.Application\CarManagementApp.Application.csproj" />
     <ProjectReference Include="..\CarManagementApp.Domain\CarManagementApp.Domain.csproj" />
   </ItemGroup>
 
