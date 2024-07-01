@@ -1,4 +1,4 @@
-﻿using CarManagementApp.Core.Common;
+﻿using CarManagementApp.Domain.Common;
 using CarManagementApp.Domain.Models;
 
 namespace CarManagementApp.Core.Services
